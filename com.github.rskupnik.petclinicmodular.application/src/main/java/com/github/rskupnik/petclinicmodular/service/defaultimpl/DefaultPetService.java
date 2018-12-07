@@ -16,7 +16,7 @@ public class DefaultPetService implements PetService {
 
     @Override
     public List<Pet> getAll() {
-        return (List<Pet>) petRepository.getAll();
+        return petRepository.getAll();
     }
 
     @Override
