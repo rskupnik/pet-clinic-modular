@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface PetRepository {
 
-    Collection<Pet> getAll();
+    List<Pet> getAll();
 
     Pet get(long id);
 

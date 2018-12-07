@@ -16,8 +16,8 @@ public class DefaultPetRepository implements PetRepository {
     }
 
     @Override
-    public Collection<Pet> getAll() {
-        return Collections.unmodifiableCollection(storage.values());
+    public List<Pet> getAll() {
+        return List.copyOf(storage.values());
     }
 
     @Override
