@@ -1,6 +1,6 @@
 package com.github.rskupnik.petclinicmodular.service.defaultimpl;
 
-import com.github.rskupnik.petclinicmodular.pet.PetRepository;
+import com.github.rskupnik.petclinicmodular.pet.repository.PetRepository;
 import com.github.rskupnik.petclinicmodular.pet.domain.Pet;
 import com.github.rskupnik.petclinicmodular.service.PetService;
 
@@ -16,7 +16,7 @@ public class DefaultPetService implements PetService {
 
     @Override
     public List<Pet> getAll() {
-        return petRepository.getAll();
+        return (List<Pet>) petRepository.getAll();
     }
 
     @Override
