@@ -1,7 +1,8 @@
-package com.github.rskupnik.petclinicmodular.service;
+package com.github.rskupnik.petclinicmodular.service.defaultimpl;
 
 import com.github.rskupnik.petclinicmodular.pet.PetRepository;
 import com.github.rskupnik.petclinicmodular.pet.domain.Pet;
+import com.github.rskupnik.petclinicmodular.service.PetService;
 
 import java.util.List;
 
