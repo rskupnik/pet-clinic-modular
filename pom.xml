@@ -12,6 +12,7 @@
     <modules>
         <module>com.github.rskupnik.petclinicmodular.pet</module>
         <module>com.github.rskupnik.petclinicmodular.customer</module>
+        <module>com.github.rskupnik.petclinicmodular.application</module>
     </modules>
 
     <properties>
