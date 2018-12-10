@@ -10,9 +10,10 @@ public class Customer {
     private String firstName, lastName;
     private List<Pet> pets;
 
-    public Customer(String firstName, String lastName) {
+    public Customer(String firstName, String lastName, List<Pet> pets) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.pets = pets;
     }
 
     public Long getId() {
