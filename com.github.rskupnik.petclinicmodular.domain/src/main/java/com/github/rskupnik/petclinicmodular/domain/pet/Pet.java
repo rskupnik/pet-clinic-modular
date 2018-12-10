@@ -1,10 +1,12 @@
 package com.github.rskupnik.petclinicmodular.domain.pet;
 
+import com.github.rskupnik.petclinicmodular.domain.customer.Customer;
+
 public class Pet {
 
     private Long id;
     private String name;
-    private Long ownerId;
+    private Customer owner;
 
     public Pet(String name) {
         this.name = name;
@@ -26,11 +28,11 @@ public class Pet {
         this.name = name;
     }
 
-    public Long getOwnerId() {
-        return ownerId;
+    public Customer getOwner() {
+        return owner;
     }
 
-    public void setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
+    public void setOwner(Customer owner) {
+        this.owner = owner;
     }
 }

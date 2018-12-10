@@ -1,12 +1,14 @@
 package com.github.rskupnik.petclinicmodular.domain.customer;
 
+import com.github.rskupnik.petclinicmodular.domain.pet.Pet;
+
 import java.util.List;
 
 public class Customer {
 
     private Long id;
     private String firstName, lastName;
-    private List<Long> pets;
+    private List<Pet> pets;
 
     public Customer(String firstName, String lastName) {
         this.firstName = firstName;
@@ -37,11 +39,11 @@ public class Customer {
         this.lastName = lastName;
     }
 
-    public List<Long> getPets() {
+    public List<Pet> getPets() {
         return pets;
     }
 
-    public void setPets(List<Long> pets) {
+    public void setPets(List<Pet> pets) {
         this.pets = pets;
     }
 }
