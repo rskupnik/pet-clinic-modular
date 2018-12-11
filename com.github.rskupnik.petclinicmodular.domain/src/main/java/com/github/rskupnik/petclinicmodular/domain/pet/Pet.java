@@ -8,6 +8,10 @@ public class Pet {
     private String name;
     private Customer owner;
 
+    public Pet() {
+
+    }
+
     public Pet(String name) {
         this.name = name;
     }

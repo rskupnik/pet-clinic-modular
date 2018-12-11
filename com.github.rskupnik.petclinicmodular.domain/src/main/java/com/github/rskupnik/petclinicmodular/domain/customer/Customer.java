@@ -10,6 +10,10 @@ public class Customer {
     private String firstName, lastName;
     private List<Pet> pets;
 
+    public Customer() {
+
+    }
+
     public Customer(String firstName, String lastName, List<Pet> pets) {
         this.firstName = firstName;
         this.lastName = lastName;
