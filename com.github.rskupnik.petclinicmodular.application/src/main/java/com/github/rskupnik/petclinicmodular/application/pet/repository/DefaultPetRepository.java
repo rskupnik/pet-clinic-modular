@@ -1,36 +1,25 @@
 package com.github.rskupnik.petclinicmodular.application.pet.repository;
 
 import com.github.rskupnik.petclinicmodular.application.pet.repository.api.PetRepository;
+import com.github.rskupnik.petclinicmodular.application.shared.repository.InMemoryRepository;
 import com.github.rskupnik.petclinicmodular.domain.pet.Pet;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-public class DefaultPetRepository implements PetRepository {
-
-    private final Map<Long, Pet> storage = new HashMap<>();
-
-    private long currentId = 0;
-
-    private long nextId() {
-        return ++currentId;
-    }
+public class DefaultPetRepository extends InMemoryRepository<Pet> implements PetRepository {
 
     @Override
     public List<Pet> getAll() {
-        return List.copyOf(storage.values());
+        return super.getAll();
     }
 
     @Override
     public Pet get(long id) {
-        return storage.get(id);
+        return super.get(id);
     }
 
     @Override
     public void add(Pet pet) {
-        long id = nextId();
-        pet.setId(id);
-        storage.put(id, pet);
+        pet.setId(super.store(pet));
     }
 }
