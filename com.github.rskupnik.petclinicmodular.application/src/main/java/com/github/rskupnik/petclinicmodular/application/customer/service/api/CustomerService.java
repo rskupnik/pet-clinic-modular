@@ -2,6 +2,7 @@ package com.github.rskupnik.petclinicmodular.application.customer.service.api;
 
 import com.github.rskupnik.petclinicmodular.application.customer.repository.api.CustomerRepository;
 import com.github.rskupnik.petclinicmodular.application.customer.service.DefaultCustomerService;
+import com.github.rskupnik.petclinicmodular.application.pet.service.api.PetService;
 import com.github.rskupnik.petclinicmodular.domain.customer.Customer;
 
 import java.util.List;
@@ -14,7 +15,7 @@ public interface CustomerService {
 
     void add(Customer customer);
 
-    static CustomerService defaultService(CustomerRepository repository) {
-        return new DefaultCustomerService(repository);
+    static CustomerService defaultService(CustomerRepository repository, PetService petService) {
+        return new DefaultCustomerService(repository, petService);
     }
 }
